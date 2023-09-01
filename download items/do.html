@@ -27,21 +27,35 @@
       <li class="list-group-item">Item 3</li>
       <li class="list-group-item">Item 4</li>
     </ul>
+    <span>raju</span>
    </div>
   </div>
 <script>
-let items=document.querySelector(".list-group-item:nth-child(2)");
-items.style.backgroundColor="green";
-items.style.color="green";
-let third =document.querySelector('.list-group-item:nth-child(3)');
-third.style.display="none";
-let odd=document.querySelectorAll('li:nth-child(odd)')
-let even=document.querySelectorAll("li:nth-child(even)");
-for(let i=0;i<odd.length;i++){
-  odd[i].style.backgroundColor="green";
-  even[i].style.backgroundColor="red";
-}
-
+let products=document.querySelector('#items');
+console.log(products.parentElement);
+products.parentElement.style.backgroundColor="red";
+console.log(products.lastElementChild);
+console.log(products.lastChild);
+console.log(products.firstElementChild);
+console.log(products.firstChild);
+console.log(products.nextSibling);
+console.log(products.nextElementSibling);
+console.log(products.previousSibling);
+console.log(products.previousElementSibling);
+let newDiv=document.createElement('div');
+newDiv.className="puthusu";
+newDiv.id="natha";
+newDiv.setAttribute('title','hello')
+newDiv.textContent="HEllo word";
+let newpiv=document.createElement('div');
+newpiv.className="puthus";
+newpiv.id="nath";
+newpiv.textContent="HEllo word";
+let h1=document.querySelector('header h1');
+let container=document.querySelector('header .container ');
+container.insertBefore(newDiv,h1);
+let item1=products.firstElementChild;
+products.insertBefore(newpiv,item1);
 </script>
 </body>
 </html>
