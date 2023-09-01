@@ -30,14 +30,18 @@
    </div>
   </div>
 <script>
-  let items=document.getElementsByClassName("list-group-item")
-items[2].style.backgroundColor="green";
-
-let all=document.getElementsByClassName('list-group');
-
-for(let i=0;i<items.length;i++){
-  items[i].style.fontWeight='bold';
+let items=document.querySelector(".list-group-item:nth-child(2)");
+items.style.backgroundColor="green";
+items.style.color="green";
+let third =document.querySelector('.list-group-item:nth-child(3)');
+third.style.display="none";
+let odd=document.querySelectorAll('li:nth-child(odd)')
+let even=document.querySelectorAll("li:nth-child(even)");
+for(let i=0;i<odd.length;i++){
+  odd[i].style.backgroundColor="green";
+  even[i].style.backgroundColor="red";
 }
+
 </script>
 </body>
 </html>
