@@ -18,5 +18,5 @@ myform.addEventListener('submit', (e)=>{
     e.preventDefault();
     if(inputname.value===" "||emailname.value===" "){
         inputname.addEventListener('error');
-    }
+    }//foo
 })
